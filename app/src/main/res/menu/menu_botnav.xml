@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/database_container"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="page database"/>
+
+    <item
+        android:id="@+id/fillDatabaseFragment"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="page manage"/>
+
+</menu>

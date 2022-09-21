@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/dbBotnavFragment">
+
+    <fragment
+        android:id="@+id/dbBotnavFragment"
+        android:name="com.example.hw14roombottomnavigation.DbBotnavFragment"
+        android:label="dbBotnavFragment" />
+
+    <fragment
+        android:id="@+id/fillDatabaseFragment"
+        android:name="com.example.hw14roombottomnavigation.FillDatabaseFragment"
+        android:label="fillDatabaseFragment" />
+</navigation>
