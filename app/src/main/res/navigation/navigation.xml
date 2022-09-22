@@ -7,10 +7,5 @@
     <fragment
         android:id="@+id/dbBotnavFragment"
         android:name="com.example.hw14roombottomnavigation.DbBotnavFragment"
-        android:label="dbBotnavFragment" />
-
-    <fragment
-        android:id="@+id/fillDatabaseFragment"
-        android:name="com.example.hw14roombottomnavigation.FillDatabaseFragment"
-        android:label="fillDatabaseFragment" />
+        android:label="DbBotnavFragment" />
 </navigation>

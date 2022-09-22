@@ -2,13 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/database_container"
+        android:id="@+id/fragment_page"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_agenda"
-        android:title="page database"/>
+        android:title="Database"/>
 
     <item
-        android:id="@+id/fillDatabaseFragment"
+        android:id="@+id/fragment_fill_db"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_edit"
-        android:title="page manage"/>
+        android:title="Manage database"/>
 
 </menu>
