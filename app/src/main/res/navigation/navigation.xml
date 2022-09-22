@@ -4,8 +4,12 @@
     android:id="@+id/navigation"
     app:startDestination="@id/dbBotnavFragment">
 
+<!--    <include app:graph="@navigation/navigation_fragment"/>-->
+
     <fragment
         android:id="@+id/dbBotnavFragment"
         android:name="com.example.hw14roombottomnavigation.DbBotnavFragment"
         android:label="DbBotnavFragment" />
+
+
 </navigation>
