@@ -11,6 +11,10 @@ class FillDatabaseFragment : Fragment() {
     private var _binding: FragmentFilldatabaseBinding? = null
     private val binding get() = requireNotNull(_binding)
 
+    private val petDao by lazy {
+        requireContext().appD
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
