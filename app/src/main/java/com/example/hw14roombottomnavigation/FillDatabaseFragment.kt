@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.hw14roombottomnavigation.databinding.FragmentFilldatabaseBinding
+import com.example.hw14roombottomnavigation.extensions.getTextOrSetError
 
 class FillDatabaseFragment : Fragment() {
     private var _binding: FragmentFilldatabaseBinding? = null
@@ -27,10 +28,33 @@ class FillDatabaseFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        updateDatabase()
+
+        with(binding) {
+            buttonAdd.setOnClickListener {
+                val petType = containerPet.getTextOrSetError()
+                val petBreed = containerPetBreed.getTextOrSetError()
+                val petName = containerPetName.getTextOrSetError()
+
+                if (petType == null || petBreed == null || petName == null) return@setOnClickListener
+                petDao.insertAll(RoomPet(petType = petType, petBreed = petBreed, petName = petName))
+                updateDatabase()
+            }
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private fun updateDatabase() {
+        with(binding) {
+            resultInfo.text = petDao.getAll().joinToString("\n")
+            containerPet.error = null
+            containerPetBreed.error = null
+            containerPetName.error = null
+        }
     }
 }
