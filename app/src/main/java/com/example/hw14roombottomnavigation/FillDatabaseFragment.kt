@@ -12,7 +12,7 @@ class FillDatabaseFragment : Fragment() {
     private val binding get() = requireNotNull(_binding)
 
     private val petDao by lazy {
-        requireContext().appD
+        requireContext().appDatabase.petDao()
     }
 
     override fun onCreateView(
