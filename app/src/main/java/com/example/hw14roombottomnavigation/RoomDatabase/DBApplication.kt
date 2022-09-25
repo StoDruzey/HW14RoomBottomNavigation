@@ -1,8 +1,9 @@
-package com.example.hw14roombottomnavigation
+package com.example.hw14roombottomnavigation.RoomDatabase
 
 import android.app.Application
 import android.content.Context
 import androidx.room.Room
+import com.example.hw14roombottomnavigation.RoomDatabase.AppDatabase
 
 class DBApplication : Application() {
 

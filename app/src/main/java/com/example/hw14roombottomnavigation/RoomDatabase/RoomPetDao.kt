@@ -1,10 +1,10 @@
-package com.example.hw14roombottomnavigation
+package com.example.hw14roombottomnavigation.RoomDatabase
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import java.sql.Types
+import com.example.hw14roombottomnavigation.RoomDatabase.RoomPet
 
 @Dao
 interface RoomPetDao {

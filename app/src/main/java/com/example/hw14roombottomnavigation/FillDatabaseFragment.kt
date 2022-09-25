@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.hw14roombottomnavigation.RoomDatabase.RoomPet
+import com.example.hw14roombottomnavigation.RoomDatabase.appDatabase
 import com.example.hw14roombottomnavigation.databinding.FragmentFilldatabaseBinding
 import com.example.hw14roombottomnavigation.extensions.getTextOrSetError
 
