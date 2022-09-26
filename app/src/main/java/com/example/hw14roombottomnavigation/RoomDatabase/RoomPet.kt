@@ -1,4 +1,4 @@
-package com.example.hw14roombottomnavigation
+package com.example.hw14roombottomnavigation.RoomDatabase
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

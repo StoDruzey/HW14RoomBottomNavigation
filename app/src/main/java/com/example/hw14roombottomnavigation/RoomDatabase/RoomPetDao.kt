@@ -1,15 +1,18 @@
-package com.example.hw14roombottomnavigation
+package com.example.hw14roombottomnavigation.RoomDatabase
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
-import java.sql.Types
+import com.example.hw14roombottomnavigation.RoomDatabase.RoomPet
 
 @Dao
 interface RoomPetDao {
     @Query("SELECT * FROM roompet")
-    fun getAll(): List<RoomPet>
+    fun loadPetsAll(): List<RoomPet>
+
+    @Query("SELECT * FROM roompet WHERE id IN (:petIds)")
+    fun loadPetsByIds(petIds: IntArray): List<RoomPet>
 
     @Query("SELECT * FROM roompet WHERE type LIKE :petType")
     fun loadPetsByType(petType: String): List<RoomPet>

@@ -1,12 +1,14 @@
-package com.example.hw14roombottomnavigation
+package com.example.hw14roombottomnavigation.RoomDatabase
 
 import android.app.Application
+import android.content.Context
 import androidx.room.Room
+import com.example.hw14roombottomnavigation.RoomDatabase.AppDatabase
 
 class DBApplication : Application() {
 
     private var _appDB: AppDatabase? = null
-    private val appDB get() = requireNotNull(_appDB)
+    val appDB get() = requireNotNull(_appDB)
 
     override fun onCreate() {
         super.onCreate()
@@ -20,3 +22,9 @@ class DBApplication : Application() {
             .build()
     }
 }
+
+val Context.appDatabase: AppDatabase
+    get() = when (this) {
+        is DBApplication -> appDB
+        else -> applicationContext.appDatabase
+    }
