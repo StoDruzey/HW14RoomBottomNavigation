@@ -53,7 +53,7 @@ class FillDatabaseFragment : Fragment() {
 
     private fun updateDatabase() {
         with(binding) {
-            resultInfo.text = petDao.getAll().joinToString("\n")
+            resultInfo.text = petDao.loadPetsAll().joinToString("\n")
             containerPet.error = null
             containerPetBreed.error = null
             containerPetName.error = null
