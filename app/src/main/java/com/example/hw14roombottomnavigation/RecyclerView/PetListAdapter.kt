@@ -22,10 +22,7 @@ class PetViewHolder(
     }
 }
 
-class PetListAdapter(
-    context: Context,
-private val onPetClicked: (RoomPet) -> Unit
-) : ListAdapter<RoomPet, PetViewHolder>(DIFF_UTIL) {
+class PetListAdapter: ListAdapter<RoomPet, PetViewHolder>(DIFF_UTIL) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetViewHolder {
         return PetViewHolder(
