@@ -1,5 +1,6 @@
 package com.example.hw14roombottomnavigation.RecyclerView
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
@@ -21,7 +22,10 @@ class PetViewHolder(
     }
 }
 
-class PetListAdapter : ListAdapter<RoomPet, PetViewHolder>(DIFF_UTIL) {
+class PetListAdapter(
+    context: Context,
+private val onPetClicked: (RoomPet) -> Unit
+) : ListAdapter<RoomPet, PetViewHolder>(DIFF_UTIL) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PetViewHolder {
         return PetViewHolder(
